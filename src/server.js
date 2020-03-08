@@ -23,10 +23,15 @@ function recFindByExt(base, ext, files, result) {
 function getMovies() {
   try {
     let response = [];
-    response.push(recFindByExt("/Downloads/peliculas", "mp4"));
-    if (response.length >= 1) {
-      response.push(recFindByExt("/Downloads/peliculas", "mkv"));
-    }
+    const extensions = fs.readFileSync("config.csv", "utf8");
+    const rows = extensions.split("\n");
+    rows.forEach((ele, idx) => {
+      if (idx > 0) {
+        const column = ele.split(";");
+        const results = recFindByExt(column[0], column[1].replace("\r", ""));
+        response.push(results);
+      }
+    });
     response = response[0].concat(response[1]);
     let lis = ``;
     response.forEach(element => {

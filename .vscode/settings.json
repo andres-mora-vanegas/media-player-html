@@ -9,14 +9,4 @@
             "**/*.scss",
             "**/*.sass"
     ],
-    // "liveServer.settings.https": {
-    //     "enable": true, //set it true to enable the feature.
-    //     "cert": "C:\\xampp\\htdocs\\web-components-vanillajs\\ssl\\server.crt", //full path of the certificate
-    //     "key": "C:\\xampp\\htdocs\\web-components-vanillajs\\ssl\\server.key", //full path of the private key
-    //     // "cert": "/Users/fidel.mora/Documents/dev/web-components-vanillajs/ssl/server.crt", //full path of the certificate
-    //     // "key": "/Users/fidel.mora/Documents/dev/web-components-vanillajs/ssl/server.key", //full path of the private key
-    //     // "cert": "/Users/Fercho/Documents/proyectos/proyecto-andres/ssl/server.crt", //full path of the certificate
-    //     // "key": "/Users/Fercho/Documents/proyectos/proyecto-andres/ssl/server.key", //full path of the private key
-    //     "passphrase": "12345"
-    // }
 }

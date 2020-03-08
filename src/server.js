@@ -28,10 +28,16 @@ function getMovies() {
     }
     response = response[0].concat(response[1]);
     let lis = ``;
+    const preg= new RegExp(`\\Downloads`,'g');
+    const back= new RegExp(`\/`,'g');
     response.forEach(element => {
       const spliti = element.split("\\");
       const last = spliti.length - 1;
-      const realLink = element.replace(/\\/g,'\\\\');
+      console.log(`element`,element);
+      console.log(`preg.test(element)`,preg.test(element));
+      let realLink = element.replace(/\\/g,"/");
+      // realLink = element.replace(/\/Downloads\/peliculas/g,"http://127.0.0.1/peliculas/");
+      // realLink = element.replace(back,'/');
       lis += `<li><a href="${realLink}">${spliti[last]}</a></li>`;
     });
 
